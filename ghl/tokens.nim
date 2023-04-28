@@ -1,6 +1,8 @@
 type
   TokenKind* = enum
     TK_C_IDENTIFIER
+    TK_C_REAL
+    TK_C_TEXT
 
   Token* = ref object
     kind*: TokenKind
