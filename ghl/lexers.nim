@@ -54,7 +54,7 @@ proc error(lexer; msg: string = "Unexpected character '" & $lexer.get() & "'"): 
   lexer.errors.add(newError("[Lexer]: " & msg, lexer.line, lexer.column))
 
 const RESERVED_LEXEMES = toTable({
-  "": TK_C_IDENTIFIER
+  "+":            TK_O_ADD
 })
 
 const DIGIT = {'0'..'9'}

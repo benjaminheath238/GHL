@@ -1,8 +1,12 @@
 type
   TokenKind* = enum
-    TK_C_IDENTIFIER
-    TK_C_REAL
     TK_C_TEXT
+    TK_C_REAL
+    TK_C_IDENTIFIER
+
+    TK_O_ADD
+
+    TK_S_EOS
 
   Token* = ref object
     kind*: TokenKind
@@ -11,7 +15,7 @@ type
 
     line*: int
     column*: int
-  
+
 proc newToken*(
   kind: TokenKind;
   
